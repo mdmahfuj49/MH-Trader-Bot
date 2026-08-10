@@ -11,11 +11,11 @@ from telegram.ext import (
     ContextTypes
 )
 
-from config import (
-    TELEGRAM_TOKEN,
-    GEMINI_API_KEY,
-    CHANNEL_ID
-)
+import os
+
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+CHANNEL_ID = os.getenv("CHANNEL_ID")
 
 
 # Gemini Setup
